@@ -1,7 +1,7 @@
 # Fable
 ## Description
-Fable is intented to be used as the main website of https://fabricated.world
-However it is modular by nature so feel free to use this website as a base and adapt it to your needs!
+Fable is the project that power our website!<br/>
+However it is intended to be modular and highly customisable.<br/>
 
 This project is still under development thought and it is not ready for production use.
 ## Developing
