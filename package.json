@@ -18,16 +18,31 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
 		"mdsvex": "^0.11.0",
+		"mdsvex-reading-time": "^1.0.4",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
+		"rehype-katex-svelte": "^1.2.0",
+		"remark-math": "^3.0.0",
+		"shiki": "^1.1.7",
 		"svelte": "^4.2.7",
+		"svelte-check": "^3.6.4",
+		"tslib": "^2.6.2",
+		"typescript": "^5.3.3",
 		"vite": "^5.0.3"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource/jetbrains-mono": "^5.0.18",
 		"@fontsource/manrope": "^5.0.18",
+		"front-matter": "^4.0.2",
+		"katex": "^0.16.9",
+		"lucide-svelte": "^0.344.0",
 		"open-props": "^1.6.18",
-		"svelte-material-icons": "^3.0.5"
+		"rehype-autolink-headings": "^7.1.0",
+		"rehype-mermaid": "^2.1.0",
+		"rehype-slug": "^6.0.0",
+		"remark-github-beta-blockquote-admonitions": "^3.1.1",
+		"remark-toc": "^9.0.0",
+		"remark-unwrap-images": "^4.0.0"
 	}
 }

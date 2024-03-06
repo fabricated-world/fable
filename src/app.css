@@ -1,123 +1,107 @@
-@import '@fontsource/manrope';
-@import '@fontsource/jetbrains-mono';
-
 html {
-    /* fonts */
-    --font-name: 'Manrope', sans-serif;
-    --font-name: 'Jetbrains Mono', monospace;
+	/* fonts */
+	--font-name: 'Manrope', sans-serif;
+	--font-name: 'Jetbrains Mono', monospace;
 
-    /* dark theme */
-    --primary-dark: var(--cyan-6);
+	/* dark theme */
+	--primary-dark: var(--cyan-6);
 
-    --text-1-dark: var(--gray-3);
-    --text-2-dark: var(--gray-5);
-    
-    --surface-1-dark: var(--gray-12);
-    --surface-2-dark: var(--gray-11);
-    --surface-3-dark: var(--gray-10);
-    --surface-4-dark: var(--gray-9);
-    
-    --background-dark: var(--gradien-8);
-    --border-dark: var(--gray-9);
+	--text-1-dark: var(--gray-3);
+	--text-2-dark: var(--gray-5);
 
-    /* light theme */
-    --primary-light: var(--cyan-4);
+	--surface-1-dark: var(--gray-12);
+	--surface-2-dark: var(--gray-11);
+	--surface-3-dark: var(--gray-10);
+	--surface-4-dark: var(--gray-9);
 
-    --text-1-light: var(--gray-8);
-    --text-2-light: var(--gray-7);
-    
-    --surface-1-light: var(--gray-0);
-    --surface-2-light: var(--gray-1);
-    --surface-3-light: var(--gray-2);
-    --surface-4-light: var(--gray-3);
-    
-    --background-light: none;
-    --border-light: var(--gray-4);
-}
+	--background-dark: var(--gradien-8);
+	--border-dark: var(--gray-9);
 
-:root {
-    color-scheme: dark;
-    
-    --primary: var(--primary-dark);
-    
-    --text-1: var(--text-1-dark);
-    --text-2: var(--text-2-dark);
+	/* light theme */
+	--primary-light: var(--cyan-4);
 
-    --surface-1: var(--surface-1-dark);
-    --surface-2: var(--text-2-dark);
-    --surface-3: var(--surface-3-dark);
-    --surface-4: var(--surface-4-dark);
+	--text-1-light: var(--gray-8);
+	--text-2-light: var(--gray-7);
 
-    --background: var(--background-dark);
-    --border: var(--border-dark);
-}
+	--surface-1-light: var(--gray-0);
+	--surface-2-light: var(--gray-1);
+	--surface-3-light: var(--gray-2);
+	--surface-4-light: var(--gray-3);
 
-@media (prefers-color-scheme: light) {
-    :root {
-        color-scheme: light;
-        
-        --primary: var(--primary-light);
-        
-        --text-1: var(--text-1-light);
-        --text-2: var(--text-2-light);
-
-        --surface-1: var(--surface-1-light);
-        --surface-2: var(--text-2-light);
-        --surface-3: var(--surface-3-light);
-        --surface-4: var(--surface-4-light);
-
-        --background: var(--background-light);
-        --border: var(--border-light);
-    }
+	--background-light: none;
+	--border-light: var(--gray-4);
 }
 
 [color-scheme='dark'] {
-    color-scheme: dark;
-    
-    --primary: var(--primary-dark);
-    
-    --text-1: var(--text-1-dark);
-    --text-2: var(--text-2-dark);
+	color-scheme: dark;
 
-    --surface-1: var(--surface-1-dark);
-    --surface-2: var(--text-2-dark);
-    --surface-3: var(--surface-3-dark);
-    --surface-4: var(--surface-4-dark);
+	--primary: var(--primary-dark);
 
-    --background: var(--background-dark);
-    --border: var(--border-dark);
+	--text-1: var(--text-1-dark);
+	--text-2: var(--text-2-dark);
+
+	--surface-1: var(--surface-1-dark);
+	--surface-2: var(--surface-2-dark);
+	--surface-3: var(--surface-3-dark);
+	--surface-4: var(--surface-4-dark);
+
+	--background: var(--background-dark);
+	--border: var(--border-dark);
+
+	/* Shiki Codeblocks site theme reaction */
+	.shiki,
+	.shiki span {
+		color: var(--shiki-dark) !important;
+		background-color: var(--shiki-dark-bg) !important;
+		/* Optional, if you also want font styles */
+		font-style: var(--shiki-dark-font-style) !important;
+		font-weight: var(--shiki-dark-font-weight) !important;
+		text-decoration: var(--shiki-dark-text-decoration) !important;
+	}
 }
 
-[color-scheme="light"] {
-    color-scheme: light;
-    
-    --primary: var(--primary-light);
-    
-    --text-1: var(--text-1-light);
-    --text-2: var(--text-2-light);
+[color-scheme='light'] {
+	color-scheme: light;
 
-    --surface-1: var(--surface-1-light);
-    --surface-2: var(--text-2-light);
-    --surface-3: var(--surface-3-light);
-    --surface-4: var(--surface-4-light);
+	--primary: var(--primary-light);
 
-    --background: var(--background-light);
-    --border: var(--border-light);
+	--text-1: var(--text-1-light);
+	--text-2: var(--text-2-light);
+
+	--surface-1: var(--surface-1-light);
+	--surface-2: var(--surface-2-light);
+	--surface-3: var(--surface-3-light);
+	--surface-4: var(--surface-4-light);
+
+	--background: var(--background-light);
+	--border: var(--border-light);
+
+	/* Shiki Codeblocks site theme reaction */
+	.shiki,
+	.shiki span {
+		color: var(--shiki-light) !important;
+		background-color: var(--shiki-light-bg) !important;
+		/* Optional, if you also want font styles */
+		font-style: var(--shiki-light-font-style) !important;
+		font-weight: var(--shiki-light-font-weight) !important;
+		text-decoration: var(--shiki-light-text-decoration) !important;
+	}
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
 html {
-    color: var(--text-1);
-    accent-color: var(--link);
-    background-image: var(--background);
-    background-attachment: fixed;
+	color: var(--text-1);
+	accent-color: var(--link);
+	background-image: var(--background);
+	background-attachment: fixed;
 }
 
 img {
-    border-radius: var(--radius-3);
+	border-radius: var(--radius-3);
 }
 
 ul,
@@ -148,4 +132,60 @@ li {
 .surface-4 {
 	background-color: var(--surface-4);
 	color: var(--text-1);
+}
+
+.blog-content :is(h1, h2, h3, h4, h5, h6) {
+  position: relative;
+  left: calc(var(--size-5) * -1);
+  display: flex;
+  align-items: center;
+}
+
+.blog-content .header-link {
+  color: var(--text-2);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .3s;
+  position: relative;
+  left: calc(var(--size-4) * -1);
+  min-width: var(--size-7);
+  min-height: var(--size-7);
+  max-width: var(--size-7);
+  max-height: var(--size-7);
+}
+
+.blog-content h1:hover .header-link,
+.blog-content h2:hover .header-link,
+.blog-content h3:hover .header-link,
+.blog-content h4:hover .header-link,
+.blog-content h5:hover .header-link,
+.blog-content h6:hover .header-link {
+  opacity: 1;
+}
+
+.blog-content :is(h2, h3, h4, h5, h6) {
+	margin-top: var(--size-8);
+	margin-bottom: var(--size-3);
+}
+
+.blog-content p:not(:is(h2, h3, h4, h5, h6) + p) {
+	margin-top: var(--size-7);
+}
+
+.blog-content :is(ul, ol) {
+	list-style-type: disc;
+	padding-left: var(--size-5);
+}
+
+.blog-content :is(ul, ol) li {
+	margin-block: var(--size-2);
+	padding-inline-start: var(--size-2);
+}
+
+.blog-content pre {
+	max-inline-size: 100%;
+	padding: var(--size-3);
+	border-radius: var(--radius-2);
+	tab-size: 2;
+	background: var(--surface-4);
 }
