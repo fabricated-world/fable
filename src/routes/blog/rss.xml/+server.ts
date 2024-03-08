@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import * as env from '$env/static/public';
 import type { Post } from '$lib/types';
 
