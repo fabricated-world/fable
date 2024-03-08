@@ -42,6 +42,7 @@
 		flex-flow: row wrap;
 		gap: var(--size-2);
 		margin-top: var(--size-3);
+		margin-bottom: var(--size-4);
 	}
 
 	.tags > * {

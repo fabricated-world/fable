@@ -4,6 +4,7 @@
 
 <footer>
 	<p>{description}</p>
+	<p>note: this website is still in early access</p>
 </footer>
 
 <style>
