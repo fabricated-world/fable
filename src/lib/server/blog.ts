@@ -1,4 +1,3 @@
-import frontmatter from 'front-matter';
 import type { BlogPost } from '$lib/types';
 
 let posts_cache;
@@ -64,7 +63,7 @@ async function markdownProcesser(path, data) {
 }
 
 async function fetchPosts() {
-	const blogPaths = import.meta.glob(['/src/posts/*.md'], { eager: true }); // import.meta.glob is a vite utility, more info here: https://vitejs.dev/guide/features.html#glob-import
+	const blogPaths = import.meta.glob(['@blogposts/*.md'], { eager: true }); // import.meta.glob is a vite utility, more info here: https://vitejs.dev/guide/features.html#glob-import
 
 	knownSlugs = [];
 	const posts: BlogPost[] = (
