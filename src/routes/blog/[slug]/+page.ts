@@ -4,7 +4,7 @@ import type { Post } from '$lib/types';
 
 export async function load({ fetch, params }) {
 	try {
-		const postData: Post = await (await fetch(`/api/blog/posts/${params.slug}`)).json();
+		const postData: Post = await (await fetch(`/api/blog/post/${params.slug}`)).json();
 		const post = await import(`@blogposts/${postData.path}.md`);
 
 		return {
