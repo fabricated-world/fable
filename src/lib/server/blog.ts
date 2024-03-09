@@ -22,6 +22,7 @@ function generateUniqueSlug(slug: string) {
 function slugify(path) {
 	// make the slug url friendly
 	let slug = path
+		?.toLowerCase()
 		?.replace(/[^a-zA-Z0-9-_]/g, '-') //replace any illegal character with a '-'
 		?.replace(/(-)\1+/g, '$1'); // delete any consecutive '-'.
 
