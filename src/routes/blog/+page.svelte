@@ -3,7 +3,11 @@
 	import { formatDate } from '$lib/utils/date';
 
 	export let data;
+
+	$: innerWidth = 0;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <svelte:head>
 	<title>{env.PUBLIC_NAME} Blog</title>
@@ -13,18 +17,31 @@
 	<ul class="posts">
 		{#each data.posts as post}
 			<li class="post">
-				<img
-					class="icon"
-					src={post.icon ||
-						'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='}
-					alt=""
-					loading="lazy"
-				/>
-				<div>
-					<a href="/blog/{post.slug}" class="title">{post.title}</a>
-					<p class="date">{formatDate(post.date)}</p>
-					<p class="description">{post.description}</p>
-				</div>
+				{#if innerWidth >= 1440}
+					<img
+						class="icon"
+						src={post.icon ||
+							'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII='}
+						alt=""
+						loading="lazy"
+					/>
+					<div>
+						<a href="/blog/{post.slug}" class="title">{post.title}</a>
+						<p class="date">{formatDate(post.date)}</p>
+						<p class="description">{post.description}</p>
+					</div>
+				{:else}
+					<div>
+						<a href="/blog/{post.slug}" class="title">{post.title}</a>
+						<p class="date">{formatDate(post.date)}</p>
+					</div>
+					<div class="mobile-content">
+						{#if post.icon}
+							<img class="icon" src={post.icon} alt="" loading="lazy" />
+						{/if}
+						<p class="description">{post.description}</p>
+					</div>
+				{/if}
 			</li>
 		{/each}
 	</ul>
@@ -39,9 +56,21 @@
 	.post {
 		max-inline-size: var(--size-content-3);
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		gap: var(--size-4);
 		padding: var(--size-3);
+	}
+
+	@media (min-width: 1440px) {
+		.post {
+			flex-direction: row;
+		}
+	}
+
+	.mobile-content {
+		display: flex;
+		flex-direction: row;
+		gap: var(--size-3);
 	}
 
 	.post:not(:last-child) {
