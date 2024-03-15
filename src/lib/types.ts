@@ -1,3 +1,6 @@
+import type { ComponentType } from 'svelte';
+import type { Icon } from 'lucide-svelte';
+
 export type Tags =
 	| 'programming'
 	| 'cybersecurity'
@@ -18,4 +21,10 @@ export type BlogPost = {
 	date: string;
 	published: boolean;
 	tags: Tags[];
+};
+
+export type MenuItem = {
+	name: string;
+	path: string;
+	icon?: ComponentType<Icon>;
 };

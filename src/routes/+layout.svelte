@@ -3,6 +3,8 @@
 	import 'open-props/normalize';
 	import 'open-props/buttons';
 
+	import { Home, NotepadText } from 'lucide-svelte';
+
 	import '../app.css';
 
 	import Header from '$lib/components/Header.svelte';
@@ -12,8 +14,8 @@
 <div class="layout">
 	<Header
 		links={[
-			{ name: 'Home', path: '/' },
-			{ name: 'Blog', path: '/blog' }
+			{ name: 'Home', path: '/', icon: Home },
+			{ name: 'Blog', path: '/blog', icon: NotepadText }
 		]}
 	/>
 

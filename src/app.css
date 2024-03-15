@@ -7,7 +7,7 @@ html {
 	--primary-dark: var(--cyan-6);
 
 	--text-1-dark: var(--gray-3);
-	--text-2-dark: var(--gray-5);
+	--text-2-dark: var(--gray-6);
 
 	--surface-1-dark: var(--gray-12);
 	--surface-2-dark: var(--gray-11);
@@ -21,7 +21,7 @@ html {
 	--primary-light: var(--cyan-4);
 
 	--text-1-light: var(--gray-8);
-	--text-2-light: var(--gray-7);
+	--text-2-light: var(--gray-6);
 
 	--surface-1-light: var(--gray-0);
 	--surface-2-light: var(--gray-1);

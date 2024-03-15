@@ -1,49 +1,131 @@
-<script>
+<script lang="ts">
+	import { Menu, X, Home } from 'lucide-svelte';
+
 	import * as env from '$env/static/public';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 
-	export let links = [{ name: 'Home', path: '/' }];
+	import type { MenuItem } from '$lib/types.ts';
+
+	export let links: MenuItem[] = [{ name: 'Home', path: '/', icon: Home }];
+	let sidebar_opened = false;
+
+	$: innerWidth = 0;
 </script>
 
+<svelte:window bind:innerWidth />
+
 <nav>
+	{#if innerWidth < 768}
+		<div
+			class="toggle"
+			on:click={() => {
+				sidebar_opened = !sidebar_opened;
+			}}
+		>
+			<Menu />
+		</div>
+	{/if}
 	<a href="/" class="title">{env.PUBLIC_NAME}</a>
-	<ul class="links">
-		{#each links as link}
-			<li>
-				<a href={link.path}>
-					{link.name}
-				</a>
-			</li>
-		{/each}
-	</ul>
+	{#if innerWidth >= 768}
+		<ul class="links">
+			{#each links as link}
+				<li>
+					<a href={link.path}>
+						{link.name}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
 
 	<ThemeToggle />
 </nav>
 
+{#if innerWidth < 768}
+	<div class="sidebar" class:opened={sidebar_opened}>
+		<div
+			class="toggle"
+			style="margin-bottom: var(--size-3)"
+			on:click={() => {
+				sidebar_opened = !sidebar_opened;
+			}}
+		>
+			<X style="width: var(--size-7)" />
+		</div>
+
+		<ul class="links">
+			{#each links as link}
+				<li>
+					<a href={link.path}>
+						<span class="sidebar-icon"><svelte:component this={link.icon} /></span>
+
+						{link.name}
+					</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
+{/if}
+
 <style>
 	nav {
-		padding-block: var(--size-7);
+		padding: var(--size-7) var(--size-2);
+		display: flex;
+		justify-content: space-between;
 	}
 
 	.links {
-		margin-block: var(--size-7);
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-3);
 	}
 
 	a {
 		color: inherit;
 		text-decoration: none;
+		font-size: var(--font-size-2);
+	}
+
+	li > a {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: var(--size-2);
 	}
 
 	@media (min-width: 768px) {
-		nav {
-			display: flex;
-			justify-content: space-between;
-		}
-
 		.links {
-			display: flex;
+			flex-direction: row;
 			gap: var(--size-7);
-			margin-block: 0;
 		}
+	}
+
+	.sidebar {
+		position: fixed;
+		left: calc(var(--size-14) * -1);
+		height: 100%;
+		width: var(--size-14);
+		background: var(--surface-2);
+		padding: var(--size-6);
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-4);
+		transition-duration: 0.2s;
+	}
+
+	.sidebar.opened {
+		left: 0;
+	}
+
+	.sidebar a {
+		font-size: var(--font-size-4);
+	}
+
+	.toggle {
+		cursor: pointer;
+	}
+
+	.sidebar-icon {
+		color: var(--text-2);
 	}
 </style>
