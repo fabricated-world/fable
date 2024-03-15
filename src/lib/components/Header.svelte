@@ -17,8 +17,15 @@
 <nav>
 	{#if innerWidth < 768}
 		<div
+			aria-label="Open Sidebar"
+			aria-pressed="false"
+			role="button"
+			tabindex="0"
 			class="toggle"
 			on:click={() => {
+				sidebar_opened = !sidebar_opened;
+			}}
+			on:keydown={() => {
 				sidebar_opened = !sidebar_opened;
 			}}
 		>
@@ -44,9 +51,16 @@
 {#if innerWidth < 768}
 	<div class="sidebar" class:opened={sidebar_opened}>
 		<div
+			aria-label="Close Sidebar"
+			aria-pressed="false"
+			role="button"
+			tabindex="0"
 			class="toggle"
 			style="margin-bottom: var(--size-3)"
 			on:click={() => {
+				sidebar_opened = !sidebar_opened;
+			}}
+			on:keydown={() => {
 				sidebar_opened = !sidebar_opened;
 			}}
 		>
