@@ -1,7 +1,8 @@
 html {
 	/* fonts */
-	--font-name: 'Manrope', sans-serif;
-	--font-name: 'Jetbrains Mono', monospace;
+  --font-display: 'Roboto', sans-serif;
+	--font-sans: 'Manrope', sans-serif;
+	--font-mono: 'Jetbrains Mono', monospace;
 
 	/* dark theme */
 	--primary-dark: var(--cyan-6);
@@ -98,6 +99,10 @@ html {
 	accent-color: var(--link);
 	background-image: var(--background);
 	background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
 }
 
 img {
