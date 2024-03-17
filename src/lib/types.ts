@@ -28,3 +28,13 @@ export type MenuItem = {
 	path: string;
 	icon?: ComponentType<Icon>;
 };
+
+export type Social = {
+	url: string;
+	logo: string;
+	alt: string;
+	text: string;
+	text_color?: string;
+	back_color?: string;
+	style?: string;
+};
