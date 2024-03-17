@@ -38,7 +38,7 @@
 
 	main {
 		padding-block: var(--size-9);
-		overflow: hidden;
+		overflow-x: hidden;
 	}
 
 	@media (min-width: 1440px) {
