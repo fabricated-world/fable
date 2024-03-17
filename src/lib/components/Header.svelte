@@ -133,7 +133,8 @@
 	.sidebar {
 		position: fixed;
 		left: calc(var(--size-14) * -1);
-		height: 100%;
+		top: 0;
+		height: 100vh;
 		width: var(--size-14);
 		background: var(--surface-2);
 		padding: var(--size-6);

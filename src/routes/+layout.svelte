@@ -28,10 +28,7 @@
 
 <style>
 	.layout {
-		height: 100%;
 		max-inline-size: 1440px;
-		display: grid;
-		grid-template-rows: auto 1fr auto;
 		margin-inline: auto;
 		padding-inline: var(--size-7);
 	}
