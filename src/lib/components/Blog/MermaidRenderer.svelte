@@ -15,8 +15,6 @@
 		}
 	});
 
-	console.log(getColor('--text-1'));
-
 	export let current_theme: String;
 </script>
 
