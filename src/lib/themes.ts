@@ -7,6 +7,7 @@ const defaultTheme =
 	browser &&
 	(localStorage.getItem('color-scheme') ??
 		(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+
 export const theme = writable(defaultTheme ?? 'dark');
 
 export function toggleTheme() {
@@ -19,4 +20,11 @@ export function toggleTheme() {
 }
 export function setTheme(newTheme: Theme) {
 	theme.set(newTheme);
+}
+
+// Get the computed color value of a CSS variable
+export function getColor(variableName: string) {
+	if (browser) {
+		return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
+	}
 }
