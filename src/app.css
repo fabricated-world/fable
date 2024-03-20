@@ -1,6 +1,6 @@
 html {
 	/* fonts */
-  --font-display: 'Roboto', sans-serif;
+	--font-display: 'Roboto', sans-serif;
 	--font-sans: 'Manrope', sans-serif;
 	--font-mono: 'Jetbrains Mono', monospace;
 
@@ -101,8 +101,13 @@ html {
 	background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-display);
 }
 
 img {
@@ -140,23 +145,23 @@ li {
 }
 
 .blog-content :is(h1, h2, h3, h4, h5, h6) {
-  position: relative;
-  left: calc(var(--size-5) * -1);
-  display: flex;
-  align-items: center;
+	position: relative;
+	left: calc(var(--size-5) * -1);
+	display: flex;
+	align-items: center;
 }
 
 .blog-content .header-link {
-  color: var(--text-2);
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: .3s;
-  position: relative;
-  left: calc(var(--size-4) * -1);
-  min-width: var(--size-7);
-  min-height: var(--size-7);
-  max-width: var(--size-7);
-  max-height: var(--size-7);
+	color: var(--text-2);
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: 0.3s;
+	position: relative;
+	left: calc(var(--size-4) * -1);
+	min-width: var(--size-7);
+	min-height: var(--size-7);
+	max-width: var(--size-7);
+	max-height: var(--size-7);
 }
 
 .blog-content h1:hover .header-link,
@@ -165,7 +170,7 @@ li {
 .blog-content h4:hover .header-link,
 .blog-content h5:hover .header-link,
 .blog-content h6:hover .header-link {
-  opacity: 1;
+	opacity: 1;
 }
 
 .blog-content :is(h2, h3, h4, h5, h6) {
@@ -193,4 +198,6 @@ li {
 	border-radius: var(--radius-2);
 	tab-size: 2;
 	background: var(--surface-4);
+	white-space: pre-wrap;
+	word-break: break-all;
 }
