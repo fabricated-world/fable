@@ -1,4 +1,5 @@
 import { mdsvex, escapeSvelte } from 'mdsvex';
+import { visit } from 'unist-util-visit';
 import { codeToHtml } from 'shiki';
 import { s } from 'hastscript';
 
@@ -14,17 +15,22 @@ import rehypeSlug from 'rehype-slug';
 
 async function highlighter(code, lang = 'text') {
 	try {
-		const html = escapeSvelte(
-			await codeToHtml(code, {
-				themes: {
-					dark: 'catppuccin-mocha',
-					light: 'catppuccin-latte'
-				},
-				defaultColor: false,
-				lang
-			})
-		);
-		return `{@html \`${html}\`}`;
+		if (lang === 'mermaid') {
+			return `<Components.Mermaid>{\`${code.trim().replaceAll('`', '\\`')}\`}</Components.Mermaid>`;
+		} else {
+			// Render other codeblocks using Shiki
+			const html = escapeSvelte(
+				await codeToHtml(code, {
+					themes: {
+						dark: 'catppuccin-mocha',
+						light: 'catppuccin-latte'
+					},
+					defaultColor: false,
+					lang
+				})
+			);
+			return `{@html \`${html}\`}`;
+		}
 	} catch (e) {
 		return highlighter(code);
 	}
