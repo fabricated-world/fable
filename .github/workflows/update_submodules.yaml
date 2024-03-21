@@ -9,6 +9,9 @@ jobs:
   update_submodules:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
