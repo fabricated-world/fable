@@ -12,7 +12,7 @@
 
 <a href={url} target="_blank" {style}>
 	<img src={logo} {alt} />
-	{text}
+	{@html text}
 </a>
 
 <style>
