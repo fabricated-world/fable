@@ -10,7 +10,7 @@
 	style = `--component-back-color: ${back_color}; --component-text-color: ${text_color};` + style;
 </script>
 
-<a href={url} {style}>
+<a href={url} target="_blank" {style}>
 	<img src={logo} {alt} />
 	{text}
 </a>
