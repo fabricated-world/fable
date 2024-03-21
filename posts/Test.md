@@ -16,7 +16,7 @@ import image from './test.png'
 
 # If you see this, it means that it works
 
-![fx0 logo](https://cdn.discordapp.com/icons/1046553081875280023/b50fb1c3f90c7b7f1c20ada6f2014029.webp?size=1024&format=webp&width=0&height=442)
+![fa:b logo](https://cdn.discordapp.com/icons/1046553081875280023/b50fb1c3f90c7b7f1c20ada6f2014029.webp?size=1024&format=webp&width=0&height=442)
 
 
 $$
