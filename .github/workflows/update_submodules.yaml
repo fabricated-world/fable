@@ -25,6 +25,7 @@ jobs:
 
       - name: Update submodules
         run: |
+          git submodule update --init --recursive
           git submodule update --remote --merge
           git add .
           git commit -m "🔄 Update submodules" || echo "No changes to commit"
