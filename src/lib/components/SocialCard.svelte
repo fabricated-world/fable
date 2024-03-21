@@ -23,7 +23,7 @@
 
 <style>
 	a {
-		background-color: var(--component-back-color);
+		background: var(--component-back-color);
 		color: var(--component-text-color);
 		text-decoration: none;
 
