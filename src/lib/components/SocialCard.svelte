@@ -44,5 +44,6 @@
 
 	img {
 		height: 100%;
+		border-radius: 0;
 	}
 </style>
