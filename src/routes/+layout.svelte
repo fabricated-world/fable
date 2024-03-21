@@ -31,11 +31,15 @@
 		max-inline-size: 1440px;
 		margin-inline: auto;
 		padding-inline: var(--size-7);
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
 	}
 
 	main {
 		padding-block: var(--size-9);
 		overflow-x: hidden;
+		flex: 1;
 	}
 
 	@media (min-width: 1440px) {
