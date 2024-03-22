@@ -10,7 +10,7 @@
 <svelte:window bind:innerWidth />
 
 <svelte:head>
-	<title>{env.PUBLIC_NAME} Blog</title>
+	<title>{env.PUBLIC_BLOG_NAME}</title>
 </svelte:head>
 
 <section>
