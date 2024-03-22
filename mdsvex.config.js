@@ -28,7 +28,7 @@ async function highlighter(code, lang = 'text') {
 					defaultColor: false,
 					lang
 				})
-			);
+			).replace('shiki shiki-themes', `shiki shiki-themes language-${lang}`);
 			return `{@html \`${html}\`}`;
 		}
 	} catch (e) {
