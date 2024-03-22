@@ -3,4 +3,6 @@
 	export let alt = '';
 </script>
 
+<br/><br/>
+
 <img {src} {alt} loading="lazy" />
