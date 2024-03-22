@@ -10,17 +10,15 @@ tags:
 ---
 
 <script>
-import image from './test.png'
+import image from '../static/test.png'
 </script>
 ![test image]({image})
 
 # If you see this, it means that it works
 
-![fa:b logo](https://cdn.discordapp.com/icons/1046553081875280023/b50fb1c3f90c7b7f1c20ada6f2014029.webp?size=1024&format=webp&width=0&height=442)
-
+![cool](/blog/apple_kid_thumbs_up.gif)
 
 $$
 f(x) = x^2
 $$
-
 
