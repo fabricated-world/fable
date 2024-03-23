@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.meta.title} - {env.PUBLIC_NAME} Blog</title>
+	<title>{data.meta.title} - {env.PUBLIC_NAME}</title>
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="{data.meta.title} - {env.PUBLIC_BLOG_NAME} Blog" />
 	<link
