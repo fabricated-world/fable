@@ -6,6 +6,8 @@
 </script>
 
 <article>
+	<a href="javascript:history.back()">⬅ go back</a>
+
 	<hgroup>
 		<h1>{meta.title}</h1>
 		<p>Published at {formatDate(meta.date)}</p>
@@ -34,6 +36,10 @@
 
 	h1 + p {
 		margin-top: var(--size-2);
+		color: var(--text-2);
+	}
+
+	a {
 		color: var(--text-2);
 	}
 
