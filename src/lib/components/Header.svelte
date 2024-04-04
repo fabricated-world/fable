@@ -70,9 +70,13 @@
 		<ul class="links">
 			{#each links as link}
 				<li>
-					<a href={link.path}>
+					<a
+						on:click={() => {
+							sidebar_opened = false;
+						}}
+						href={link.path}
+					>
 						<span class="sidebar-icon"><svelte:component this={link.icon} /></span>
-
 						{link.name}
 					</a>
 				</li>
