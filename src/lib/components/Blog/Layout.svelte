@@ -15,7 +15,10 @@
 
 	<div class="tags">
 		{#each meta.tags as tag}
-			<span class="surface-4">#{tag}</span>
+			<span class="surface-4"
+				>#
+				<p class="">{tag}</p></span
+			>
 		{/each}
 	</div>
 
@@ -55,5 +58,14 @@
 		padding: var(--size-1) var(--size-3);
 		border-radius: var(--radius-round);
 		white-space: nowrap;
+		display: flex;
+		flex-direction: row;
+		color: var(--text-2);
+		font-size: 120%;
+	}
+
+	.tags p {
+		color: var(--text-1);
+		font-size: 90%;
 	}
 </style>
