@@ -6,11 +6,11 @@
 </script>
 
 <article>
-	<a href="javascript:history.back()">⬅ go back</a>
+	<a href={'javascript:history.back()'}>⬅ go back</a>
 
 	<hgroup>
 		<h1>{meta.title}</h1>
-		<p>Published at {formatDate(meta.date)}</p>
+		<p>Published on {formatDate(meta.date)} by {meta.author}.</p>
 	</hgroup>
 
 	<div class="tags">
